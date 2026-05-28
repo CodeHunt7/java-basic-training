@@ -1,20 +1,7 @@
-import java.util.Arrays;
+import java.io.IOException;
 
 public class Main {
-    public static void main(String[] args) {
-        //ArrayStatsTask.printStats();
-
-        int number = 1;
-
-        switch (number) {
-            case 1:
-                System.out.println("One");
-            case 2:
-                System.out.println("Two");
-            case 3:
-                System.out.println("Three");
-            default:
-                System.out.println("Default");
-        }
+    public static void main(String[] args) throws IOException {
+        CodeRun1MiddleElement.run();
     }
 }
