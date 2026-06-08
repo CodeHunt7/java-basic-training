@@ -22,6 +22,34 @@ public class YaBackendIntProb2 {
         // Сразу сортируем массив
         Arrays.sort(inputLogs);
 
+        boolean rWeThereYet = false;
+        for (int i = 0; i < n; i++) {
+            if (tryBuild(inputLogs, 0, 1, i, writer)) {
+                rWeThereYet = true;
+                break;
+            }
+        }
+        if (!rWeThereYet) {
+            for (int i = 0; i < n; i++) {
+                if (tryBuild(inputLogs, 0, 2, i, writer)) {
+                    rWeThereYet = true;
+                    break;
+                }
+            }
+        }
+        if (!rWeThereYet) {
+            for (int i = 0; i < n; i++) {
+                if (tryBuild(inputLogs, 1, 2, i, writer)) {
+                    rWeThereYet = true;
+                    break;
+                }
+            }
+        }
+        if (!rWeThereYet) {
+            writer.write("-1");
+            writer.newLine();
+        }
+
         // Пробуем 3 варианта среди первых трех чисел
         // if (!tryBuild(inputLogs, 0, 1, writer)) {
         //     if (!tryBuild(inputLogs, 0, 2, writer)) {
@@ -32,8 +60,7 @@ public class YaBackendIntProb2 {
         //     }
         // }
 
-        tryBuild(inputLogs, 0, 1, 2, writer);// Отладка
-        
+        // Отладка
         // writer.write(String.valueOf(n));
         // writer.newLine();
         // for (int i = 0; i < n; i++) {
@@ -43,6 +70,7 @@ public class YaBackendIntProb2 {
 
         reader.close();
         writer.close();
+        
     }
     
     // Функция проверки на прогрессию
