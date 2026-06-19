@@ -2,6 +2,7 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        CodeRun85TreeHeight.run();
+        YanTrainAlgorithms9b1test1.run();
+       
     }
 }
