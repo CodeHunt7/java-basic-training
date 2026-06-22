@@ -2,7 +2,6 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        YanTrainAlgorithms9b1test1.run();
-       
+        YanTrainAlgorithms9b1prac1task1.run(); 
     }
 }
