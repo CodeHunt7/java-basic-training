@@ -165,7 +165,7 @@ public class YanTrainAlgorithms9b1test2 {
         Arrays.fill(answer, 0, winnerPos, 0);
         Arrays.fill(answer, winnerPos, n, 1);
         
-        //Проверяем последний
+        // Проверяем последний
         if (capitalsArray[n-1] > capitalsArray[n-2]) {
             answer[n - 1] = 1;
         }
