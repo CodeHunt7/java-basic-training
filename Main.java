@@ -1,3 +1,4 @@
+import yantrainalgorithms9.YanTrainAlgorithms9b1prac1task1;
 import java.io.IOException;
 
 public class Main {

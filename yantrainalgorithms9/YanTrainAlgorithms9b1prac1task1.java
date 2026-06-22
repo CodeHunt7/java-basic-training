@@ -1,3 +1,5 @@
+package yantrainalgorithms9;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;

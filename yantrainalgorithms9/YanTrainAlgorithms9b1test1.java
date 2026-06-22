@@ -1,6 +1,8 @@
 // Условие:
 // Нужно раскодировать строку: 'a' по 'i' - 1 до 9, с 'j' по 'z' - 10# до 26#.
 // Пример: hello будет закодирована как «8512#12#15#». На вход кодировка, на выходе слово.
+package yantrainalgorithms9;
+
 import java.util.Scanner;
 
 public class YanTrainAlgorithms9b1test1 {
