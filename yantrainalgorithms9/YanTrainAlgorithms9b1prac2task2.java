@@ -27,7 +27,6 @@ public class YanTrainAlgorithms9b1prac2task2 {
 
         // Основной алгоритм
         int neg1 = 0, neg2 = 0, pos1 = 0, pos2 = 0;
-        boolean isZero = false;
 
         // ищем 2 негативных и 2 позитивных
         for (int i = 0; i < input.length; i++) {
@@ -50,9 +49,6 @@ public class YanTrainAlgorithms9b1prac2task2 {
                 } else if (pos1 == 0 || input[i] > pos1) {
                     pos1 = input[i];
                 }
-            }
-            if (input[i] == 0) {
-                isZero = true;
             }
         }
 
