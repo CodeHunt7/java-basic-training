@@ -29,15 +29,23 @@ public class YanTrainAlgorithms9b1prac1task1 {
 
         // Посчитай оба отрезка целиком, а потом один раз вычти длину их пересечения.
         int answer = 0;
-        // Кейс когда не пересекаются
-        if ((vasFrom < mashFrom && vasTo < mashTo && vasTo < mashFrom)
-            || (mashFrom < vasFrom && mashTo < vasTo && mashTo < vasFrom)) {
+
+        // Если отрезки пересекаются
+        if (Math.max(vasFrom, mashFrom) <= Math.min(vasTo, mashTo)) {
+            answer = Math.max(vasTo, mashTo) - Math.min(vasFrom, mashFrom) + 1;
+        } else { // если НЕ пересекаются
             answer = vasTo - vasFrom + 2 + mashTo - mashFrom;
-        } else {
-            int[] sortingArray = { vasFrom, vasTo, mashFrom, mashTo };
-            Arrays.sort(sortingArray);
-            answer = vasTo - vasFrom + 1 + mashTo - mashFrom - (sortingArray[2]-sortingArray[1]);
         }
+
+        // Кейс когда не пересекаются - СТАРОЕ РЕШЕНИЕ
+        // if ((vasFrom < mashFrom && vasTo < mashTo && vasTo < mashFrom)
+        //     || (mashFrom < vasFrom && mashTo < vasTo && mashTo < vasFrom)) {
+        //     answer = vasTo - vasFrom + 2 + mashTo - mashFrom;
+        // } else {
+        //     int[] sortingArray = { vasFrom, vasTo, mashFrom, mashTo };
+        //     Arrays.sort(sortingArray);
+        //     answer = vasTo - vasFrom + 1 + mashTo - mashFrom - (sortingArray[2]-sortingArray[1]);
+        // }
 
         writer.write(Integer.toString(answer));
         writer.newLine();
