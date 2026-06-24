@@ -1,5 +1,4 @@
 *.class
 bin/
 .vscode/
-YaBackendIntProb*.java
 .DS_Store
